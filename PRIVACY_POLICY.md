@@ -52,7 +52,7 @@ To understand how the App is used and to fix crashes, the App uses **Google Fire
 * **Approximate location.** Google Analytics derives a coarse location, such as country or city, from your device's masked IP address. The App never requests location permission.
 * **Purchase events.** When you buy Friends Bell Pro, Google Analytics records the purchase event (product ID, product name and price).
 
-All of this information is encrypted in transit (HTTPS/TLS). Google Analytics data is kept according to our Analytics property's retention setting (at most 14 months). Crashlytics crash data is kept for 90 days.
+All of this information is encrypted in transit (HTTPS/TLS) and is deleted automatically: Google Analytics event data after 2 months, and Crashlytics crash data after 90 days.
 
 Google's own privacy information is available at [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy).
 
@@ -83,7 +83,7 @@ The App does not request access to your call log, SMS, location, camera or micro
 
 * **Permissions.** You can revoke any permission at any time in your device settings. Without Contacts access, the App cannot suggest people.
 * **Delete your on-device data.** Uninstall the App, or clear its storage (Android Settings → Apps → Friends Bell → Storage → Clear storage). This permanently deletes all of your Friends Bell data from the device.
-* **Analytics and crash data.** You can ask us to delete the analytics and crash data associated with your installation by emailing **developer@blink22.com**. Otherwise it is deleted automatically after the retention periods in Section 4.
+* **Analytics and crash data.** The App has no accounts, so we cannot link this data to you or find a particular person's records. It is deleted automatically within 90 days (see Section 4).
 
 ---
 
