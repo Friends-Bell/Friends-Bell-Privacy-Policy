@@ -1,88 +1,112 @@
-# Privacy Policy for Friends-Bell
+# Privacy Policy for Friends Bell
+
+**Effective Date:** 2026-09-27
 
 ## 1. Introduction
 
-This privacy policy explains how **Friends-Bell** ("the Application") collects, uses, and protects your information. Friends-Bell was built by **Blink22** as a **Free** application (with optional premium features). This Service is provided by Blink22 at no cost and is intended for use **as is**.
+This privacy policy explains what information **Friends Bell** ("the App") uses, what leaves your device, and how it is protected. Friends Bell is built by **Blink22**. It is free to use, with optional paid features (Friends Bell Pro) sold through Google Play.
 
-By using Friends-Bell, you agree to the collection and use of information in accordance with this policy. We will **not** use or share your information with anyone except as described in this Privacy Policy.
-
----
-
-## 2. Information Collection and Use
-
-### Personally Identifiable Information
-
-The Application **does not collect personally identifiable information** (such as your name, email address, or profile pictures) on our servers. All relationship management data is stored locally on your device.
-
-### Sensitive Permissions & Data Access
-
-To provide its core functionality as a relationship manager and dialer, Friends-Bell requires access to the following sensitive data:
-
-* **Contacts (READ_CONTACTS):** Used to display your contact list, allow you to organize friends into groups, and provide "Explore" suggestions.
-* **Call Logs (READ_CALL_LOG):** Used within the **Dialer** section to display your recent call history and to automatically detect when you last contacted someone to update your reminder schedule.
-
-**Note on Privacy:** This data is processed **locally on your mobile device**. Friends-Bell does not upload your contact list, call history, or text messages to our servers or any third-party servers.
-
-### Internal Action Log
-
-The Application maintains an internal "Action Log" of activities performed within the app (e.g., swiping a contact to "Next" or marking a reminder as "Done"). This log is:
-
-* Stored locally on your device.
-* Capped at 200 entries (oldest entries are automatically deleted).
-* Used solely to improve the "Explore" scoring algorithm.
+By using Friends Bell, you agree to the handling of information described in this policy. We do not sell your information, and we do not use it for advertising.
 
 ---
 
-## 3. Automated Data Collection (Analytics)
+## 2. Summary
 
-The Application may collect certain non-identifiable information automatically to improve functionality:
+| | Stays on your device | Sent to our service provider (Google Firebase) |
+|---|---|---|
+| Your contacts (names, phone numbers, photos) | ✅ Yes, never uploaded | ❌ Never |
+| Your groups, reminders, notes and swipe history | ✅ Yes, never uploaded | ❌ Never |
+| How you use the app (screens and feature events) | | ✅ Yes, for analytics |
+| Crash reports and diagnostics | | ✅ Yes, for crash reporting |
+| App installation identifiers | | ✅ Yes, for analytics and crash reporting |
+| Approximate location (country or city, derived from IP address) | | ✅ Yes, for analytics |
+| Pro purchase events (product, price) | | ✅ Yes, for analytics |
 
-* Pages or screens visited within the Application.
-* Time and date of usage.
-* Device operating system and basic hardware information.
-* Approximate device location (used for analytics and usage patterns).
-
----
-
-## 4. Third-Party Access
-
-We use trusted third-party services for app stability and performance monitoring. These services have their own Privacy Policies:
-
-* **Google Analytics for Firebase:** [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy)
-* **Firebase Crashlytics:** [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy)
+The App has no user accounts, shows no ads, and does not use the Android Advertising ID.
 
 ---
 
-## 5. Opt-Out and Data Deletion
+## 3. Information That Stays on Your Device
 
-* **Permissions:** You can revoke Contact, Call Log, or SMS permissions at any time via your device settings. Note that doing so will disable the Dialer and automatic history detection.
-* **Uninstallation:** You can stop all information collection by uninstalling the Application.
-* **Data Reset:** You can use the "Reset All Data" button within the App Settings to wipe all local groups, action logs, and preferences.
+### Contacts
 
----
+With your permission (**READ_CONTACTS**), the App reads the names, phone numbers and photos saved in your device's contacts. It uses them only to build your daily contact cards, your groups and your reminders, and to start a call or message when you tap one. Before Android asks for this permission, the App explains what it reads and that it stays on your device.
 
-## 6. Children’s Privacy
+Your contacts are processed **only on your device**. Friends Bell never uploads, sells or shares them. When you tap Call or Message, the App hands the number to your phone's dialer or messaging app, and only because you asked.
 
-Friends-Bell is **not directed to children under 13**. We do not knowingly collect personal information from children. If we discover that a child under 13 has provided us with personal information, we will delete it immediately.
+### Your Friends Bell data
 
----
+Your groups, reminder schedules, quick reminders and their notes, "Next" and "Later" lists, hidden contacts, swipe and action history, earned badges and preferences are stored in the App's private storage on your device. The on-device action history is used only to rank the people suggested to you. None of it is uploaded.
 
-## 7. Security
-
-We value your trust in providing us access to your device data. We use commercially acceptable means to protect it. However, please remember that no method of electronic storage or transmission is 100% secure.
+This data is excluded from Android cloud backups and from device-to-device transfers, so it does not leave your device that way either.
 
 ---
 
-## 8. Changes to This Policy
+## 4. Information Collected Automatically
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted.
+To understand how the App is used and to fix crashes, the App uses **Google Firebase** (Google Analytics for Firebase, Firebase Crashlytics, Firebase Sessions and Firebase Installations). Google acts as our service provider. This information never includes your contacts' names, phone numbers or photos, or the text of your notes.
 
-**Effective Date:** 2026-03-16
+* **App interactions.** Screens viewed and feature events, such as a reminder being set or a card being swiped. These events carry only generic values, such as a card type or a count.
+* **Crash logs and diagnostics.** When the App crashes: the stack trace, app version, device model, OS version and the App's state at the time. Also basic session and performance metadata.
+* **Identifiers.** A Firebase installation ID and a Google Analytics app-instance ID. These identify an installation of the App, not you. The App does **not** collect the Android Advertising ID.
+* **Approximate location.** Google Analytics derives a coarse location, such as country or city, from your device's masked IP address. The App never requests location permission.
+* **Purchase events.** When you buy Friends Bell Pro, Google Analytics records the purchase event (product ID, product name and price).
+
+All of this information is encrypted in transit (HTTPS/TLS). Google Analytics data is kept according to our Analytics property's retention setting (at most 14 months). Crashlytics crash data is kept for 90 days.
+
+Google's own privacy information is available at [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy).
 
 ---
 
-## 9. Contact Us
+## 5. Purchases
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
+Payments are handled entirely by **Google Play**. We never see or store your payment details. The App checks the purchase receipt that Google Play returns on your device and stores your Pro status locally, encrypted.
+
+---
+
+## 6. Permissions
+
+| Permission | Why |
+|---|---|
+| Contacts | Show your contacts as cards, groups and reminders (on-device only, see Section 3). |
+| Notifications | Deliver your reminders. |
+| Alarms & reminders (exact alarms) | Make quick reminders ring at the exact time you set. |
+| Full-screen notifications (optional) | Show a ringing quick reminder over the lock screen. Without it, the reminder appears as a normal notification. |
+| Run in the foreground / vibrate / keep awake | Ring a quick reminder until you dismiss it. |
+| Run at startup | Reschedule your reminders after the device restarts. |
+
+The App does not request access to your call log, SMS, location, camera or microphone.
+
+---
+
+## 7. Your Choices and Data Deletion
+
+* **Permissions.** You can revoke any permission at any time in your device settings. Without Contacts access, the App cannot suggest people.
+* **Delete your on-device data.** Uninstall the App, or clear its storage (Android Settings → Apps → Friends Bell → Storage → Clear storage). This permanently deletes all of your Friends Bell data from the device.
+* **Analytics and crash data.** You can ask us to delete the analytics and crash data associated with your installation by emailing **developer@blink22.com**. Otherwise it is deleted automatically after the retention periods in Section 4.
+
+---
+
+## 8. Children's Privacy
+
+Friends Bell is **not directed to children under 13**. We do not knowingly collect personal information from children. If we learn that a child under 13 has provided us with personal information, we will delete it.
+
+---
+
+## 9. Security
+
+Information sent to our service provider is encrypted in transit. Your Friends Bell data stays in the App's private storage, which other apps cannot read, and your Pro status is stored encrypted. No method of electronic storage or transmission is completely secure, but we use commercially reasonable measures to protect your information.
+
+---
+
+## 10. Changes to This Policy
+
+We may update this policy from time to time. We will post the new version on this page and update the effective date above. Changes take effect when they are posted.
+
+---
+
+## 11. Contact Us
+
+If you have questions or suggestions about this policy, contact us at:
 
 📧 **developer@blink22.com**
