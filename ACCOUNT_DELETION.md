@@ -33,10 +33,11 @@ Use the subject "Delete my Friends Bell account", and include the phone number y
 | Data | |
 |---|---|
 | Your account: your phone number and sign-in record | ✅ Deleted |
-| Your profile: display name, avatar color, and who can nudge you | ✅ Deleted |
+| Your profile: display name, avatar color, who can nudge you, and the App's language | ✅ Deleted |
 | Nudges you sent and received, including the copies your friends see | ✅ Deleted |
 | The people you blocked | ✅ Deleted |
 | Your devices' notification tokens | ✅ Deleted |
+| Counts of your recent requests, kept to prevent abuse | ✅ Deleted |
 | The protected (hashed) copy of your number that lets friends find you | ✅ Deleted |
 
 Once your account is deleted, friends can no longer find you or nudge you, and the nudges between you disappear from their app too.
@@ -58,10 +59,10 @@ To remove them as well, uninstall the App or clear its storage (Android Settings
 * **In the App:** immediately.
 * **By email:** within 30 days of your request.
 * **System logs** at our service provider (Google Firebase), which may record your account ID, are deleted automatically within 30 days.
-* **WhatsApp sign-in records** (a sign-in link record and fraud-prevention counters, if you signed in with WhatsApp) aren't part of your account. They're deleted automatically 2 days after the last sign-in link was requested. A sign-in message stays in your WhatsApp chat until you delete it there.
-* **Analytics and crash data** aren't linked to your account. They're deleted automatically within 90 days, as described in the [Privacy Policy](PRIVACY_POLICY.md).
+* **WhatsApp sign-in records** (a sign-in link record and fraud-prevention counters, if you signed in with WhatsApp) aren't part of your account. They're deleted automatically within 3 days of the last sign-in link request. A sign-in message stays in your WhatsApp chat until you delete it there.
+* **Analytics and crash data** don't carry your account ID, phone number or name. They're deleted automatically within 90 days, as described in the [Privacy Policy](PRIVACY_POLICY.md).
 
-Even without deleting your account, every nudge is deleted automatically 30 days after it's sent.
+Even without deleting your account, every nudge is deleted automatically after 30 days.
 
 ---
 

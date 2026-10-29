@@ -17,10 +17,10 @@ By using Friends Bell, you agree to the handling of information described in thi
 | | Stays on your device | Sent to our service providers |
 |---|---|---|
 | Your contacts' names and photos | ✅ Yes, never uploaded | ❌ Never |
-| Your contacts' phone numbers | ✅ Yes, unless you use Find friends | Only with an account, if you allow Find friends: sent as hashed values to find friends, and never stored (Section 4) |
+| Your contacts' phone numbers | ✅ Yes, unless you have an account | Only with an account, while the App has Contacts access: sent as hashed values to find friends, and never stored (Section 4) |
 | Your groups, reminders, notes and swipe history | ✅ Yes, never uploaded | ❌ Never |
 | Your phone number, display name and avatar color | | Only with an account: Google Firebase (Section 4) |
-| Nudges you send and receive | | Only with an account: Google Firebase, deleted after 30 days (Section 4) |
+| Nudges you send and receive | | Only with an account: Google Firebase, deleted automatically after 30 days (Section 4) |
 | Your phone number, when you sign in with WhatsApp | | Meta (WhatsApp), to send you a sign-in link (Section 4) |
 | How you use the app (screens and feature events) | | ✅ Yes, Google Firebase, for analytics |
 | Crash reports and diagnostics | | ✅ Yes, Google Firebase, for crash reporting |
@@ -38,7 +38,7 @@ Our service providers are **Google Firebase** and, for WhatsApp sign-in only, **
 
 With your permission (**READ_CONTACTS**), the App reads the names, phone numbers and photos saved in your device's contacts. It uses them to build your daily contact cards, your groups and your reminders, and to start a call or message when you tap one. Before Android asks for this permission, the App explains what it reads and what leaves your device.
 
-Your contacts are processed **on your device**. Friends Bell never uploads, sells or shares their names or photos. Their phone numbers leave your device only if you have an account and allow Find friends, as described in Section 4. When you tap Call or Message, the App hands the number to your phone's dialer or messaging app, and only because you asked.
+Your contacts are processed **on your device**. Friends Bell never uploads, sells or shares their names or photos. Their phone numbers leave your device only if you have an account, as described in Section 4. When you tap Call or Message, the App hands the number to your phone's dialer or messaging app, and only because you asked.
 
 ### Your Friends Bell data
 
@@ -57,7 +57,7 @@ You sign in with your phone number. To check that the number is yours, the App s
 * **A sign-in link on WhatsApp.** If WhatsApp is installed, your phone number is sent to **Meta's WhatsApp Business Cloud API**, which delivers a "Verify account" message from the Friends Bell WhatsApp number. Tapping its button signs you in. The link works for 10 minutes, and only on the phone that asked for it. Meta processes your number and this message on our behalf. Its handling of WhatsApp messages is described in [WhatsApp's Privacy Policy](https://www.whatsapp.com/legal/privacy-policy).
 * **A code by SMS,** sent by Google Firebase, if WhatsApp isn't installed or can't deliver the link, or if you choose a text message instead.
 
-While you sign in, Google Firebase also processes your IP address and an app-integrity check (Google Play Integrity), to keep out automated and fraudulent sign-ins.
+While you sign in, Google Firebase also processes your IP address and an app-integrity check (Google Play Integrity or, if that isn't available, reCAPTCHA), to keep out automated and fraudulent sign-ins.
 
 ### What we store, and for how long
 
@@ -69,15 +69,16 @@ Your account is stored with **Google Firebase** (Firebase Authentication and Clo
 | A protected copy of your number (a keyed hash) | Let friends who have your number saved find you | You delete your account |
 | Your display name and avatar color | Show friends who a nudge is from | You delete your account |
 | Your settings: who can nudge you, and the App's language | Apply your choices | You delete your account |
+| Counts of your recent requests (for example, friend searches) | Prevent abuse | You delete your account |
 | The people you block | Stop their nudges | You unblock them or delete your account |
-| A notification token for each signed-in device (with the app version) | Deliver nudges | You log out on that device, delete your account, or don't open the App for 60 days |
-| Nudges you send and receive: the type (for example a wave or a hug) and when it was sent, answered or returned | Deliver and show nudges | Deleted automatically 30 days after they're sent |
+| A notification token for each signed-in device, stored under the App's installation ID (with the app version) | Deliver nudges | You log out on that device, delete your account, or don't open the App for 60 days |
+| Nudges you send and receive: who it's from and to, the type (for example a wave or a hug), and when it was sent, answered or returned | Deliver and show nudges | Deleted automatically after 30 days |
 
-Nudges contain no text that you write, and they don't carry your phone number. Other Friends Bell users can see only your display name and avatar color, and only if they already have your number saved or you nudge them. In **Profile → Who can nudge me** you can choose **Nobody**, so friends can no longer find you or send you new nudges.
+Nudges contain no text that you write, and they don't carry your phone number. Other Friends Bell users can see only your display name and avatar color, and only if they already have your number saved or you nudge them. In **Profile → Who can nudge me** you can choose **Nobody**, so friends can no longer find you or send you new nudges. Replies to nudges you sent still arrive.
 
-### Find friends
+### Finding friends
 
-If you allow it, the App finds which of your contacts already use Friends Bell. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. While Find friends is allowed, the App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts.
+With an account, while the App has Contacts access (for example after you tap **Find my friends**), the App finds which of your contacts already use Friends Bell. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. The App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts. To stop this, turn off Contacts access for Friends Bell in your device settings, or log out.
 
 ### WhatsApp sign-in records
 
@@ -86,7 +87,7 @@ When the App asks for a WhatsApp sign-in link, our server keeps, for each number
 * **A sign-in link record.** It is keyed by a protected copy of the number, not the number itself. It holds a hash of the link, a check that ties the link to your phone, the language of the message, WhatsApp's message ID and delivery status (sent, delivered, read or failed), and the times links were requested and used.
 * **Fraud-prevention counters.** To stop people requesting links for numbers that aren't theirs, the server counts requests per device (by a hash of the App's installation ID) and per network (by a hash of the IP address), with short tags of the numbers requested from each.
 
-These records are deleted automatically 2 days after the last link is requested. They aren't part of your account, and they expire on the same schedule whether or not you delete it.
+These records are deleted automatically within 3 days of the last link request. They aren't part of your account, and they expire on the same schedule whether or not you delete it.
 
 ### Server logs
 
@@ -96,7 +97,7 @@ Our servers keep technical logs to run and protect the service. They never conta
 
 ## 5. Information Collected Automatically
 
-To understand how the App is used and to fix crashes, the App uses **Google Firebase** (Google Analytics for Firebase, Firebase Crashlytics, Firebase Sessions and Firebase Installations). Google acts as our service provider. This information never includes your contacts' names, phone numbers or photos, or the text of your notes. It never includes your phone number, display name or account ID either, and it isn't linked to your account.
+To understand how the App is used and to fix crashes, the App uses **Google Firebase** (Google Analytics for Firebase, Firebase Crashlytics, Firebase Sessions and Firebase Installations). Google acts as our service provider. This information never includes your contacts' names, phone numbers or photos, or the text of your notes. We don't attach your phone number, display name or account ID to it either.
 
 * **App interactions.** Screens viewed and feature events, such as a reminder being set, a card being swiped, or a nudge being sent, answered or received. These events carry only generic values, such as a card type, a nudge type, where in the App an action started, a count, or a rough time range. They never say who a nudge was to or from.
 * **Crash logs and diagnostics.** When the App crashes: the stack trace, app version, device model, OS version and the App's state at the time. Also basic session and performance metadata.
@@ -120,7 +121,7 @@ Payments are handled entirely by **Google Play**. We never see or store your pay
 
 | Permission | Why |
 |---|---|
-| Contacts | Show your contacts as cards, groups and reminders (on your device, see Section 3). With an account, find friends who use Friends Bell, if you allow it (Section 4). |
+| Contacts | Show your contacts as cards, groups and reminders (on your device, see Section 3). With an account, find friends who use Friends Bell (Section 4). |
 | Notifications | Deliver your reminders and, with an account, your nudges. |
 | Alarms & reminders (exact alarms) | Make quick reminders ring at the exact time you set. |
 | Full-screen notifications (optional) | Show a ringing quick reminder over the lock screen. Without it, the reminder appears as a normal notification. |
@@ -134,11 +135,11 @@ The App does not request access to your call log, SMS, location, camera or micro
 ## 8. Your Choices and Data Deletion
 
 * **Permissions.** You can revoke any permission at any time in your device settings. Without Contacts access, the App cannot suggest people or find friends.
-* **Who can nudge you.** In **Profile → Who can nudge me**, choose **Nobody** to stop new nudges and stop friends from finding you.
+* **Who can nudge you.** In **Profile → Who can nudge me**, choose **Nobody** to stop new nudges and stop friends from finding you. Replies to nudges you sent still arrive.
 * **Delete your account.** In the App, go to **Profile → Delete account**. This deletes your account and the data linked to it right away. If you can't use the App, you can ask us by email. See [Delete Your Friends Bell Account](ACCOUNT_DELETION.md) for the steps and exactly what is deleted.
 * **Delete your on-device data.** Uninstall the App, or clear its storage (Android Settings → Apps → Friends Bell → Storage → Clear storage). This permanently deletes all of your Friends Bell data from the device. It doesn't delete your account; delete that first.
 * **WhatsApp messages.** A sign-in message we send you stays in your WhatsApp chat until you delete it there.
-* **Analytics and crash data.** This data isn't linked to your account, so we cannot find a particular person's records. It is deleted automatically within 90 days (see Section 5).
+* **Analytics and crash data.** We don't attach your account ID, phone number or name to this data. It is deleted automatically within 90 days (see Section 5).
 
 ---
 
