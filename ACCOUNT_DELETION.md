@@ -59,7 +59,7 @@ To remove them as well, uninstall the App or clear its storage (Android Settings
 * **In the App:** immediately.
 * **By email:** within 30 days of your request.
 * **System logs** at our service provider (Google Firebase), which may record your account ID, are deleted automatically within 30 days.
-* **WhatsApp sign-in records** (a sign-in link record and fraud-prevention counters, if you signed in with WhatsApp) aren't part of your account. They're deleted automatically within 3 days of the last sign-in link request. A sign-in message stays in your WhatsApp chat until you delete it there.
+* **WhatsApp sign-in records** (a sign-in link record and fraud-prevention counters, if you signed in with WhatsApp) aren't part of your account. They're deleted automatically, usually within 3 days of the last sign-in link request. A sign-in message stays in your WhatsApp chat until you delete it there.
 * **Analytics and crash data** don't carry your account ID, phone number or name. They're deleted automatically within 90 days, as described in the [Privacy Policy](PRIVACY_POLICY.md).
 
 Even without deleting your account, every nudge is deleted automatically after 30 days.

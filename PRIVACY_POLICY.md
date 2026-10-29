@@ -78,7 +78,7 @@ Nudges contain no text that you write, and they don't carry your phone number. O
 
 ### Finding friends
 
-If you have an account and allow it (by tapping **Find my friends**), the App finds which of your contacts already use Friends Bell. Before you allow it, the App explains what is sent. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. Once you've allowed it, the App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts. To stop this, turn off Contacts access for Friends Bell in your device settings, or log out.
+If you have an account and allow it (for example, by tapping **Find my friends**), the App finds which of your contacts already use Friends Bell. Before you allow it, the App explains what is sent. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. Once you've allowed it, the App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts. To stop this, turn off Contacts access for Friends Bell in your device settings, or log out.
 
 ### WhatsApp sign-in records
 
@@ -87,7 +87,7 @@ When the App asks for a WhatsApp sign-in link, our server keeps, for each number
 * **A sign-in link record.** It is keyed by a protected copy of the number, not the number itself. It holds a hash of the link, a check that ties the link to your phone, the language of the message, WhatsApp's message ID and delivery status (sent, delivered, read or failed), and the times links were requested and used.
 * **Fraud-prevention counters.** To stop people requesting links for numbers that aren't theirs, the server counts requests per device (by a hash of the App's installation ID) and per network (by a hash of the IP address), with short tags of the numbers requested from each.
 
-These records are deleted automatically within 3 days of the last link request. They aren't part of your account, and they expire on the same schedule whether or not you delete it.
+These records are deleted automatically, usually within 3 days of the last link request. They aren't part of your account, and they expire on the same schedule whether or not you delete it.
 
 ### Server logs
 
@@ -101,7 +101,7 @@ To understand how the App is used and to fix crashes, the App uses **Google Fire
 
 * **App interactions.** Screens viewed and feature events, such as a reminder being set, a card being swiped, or a nudge being sent, answered or received. These events carry only generic values, such as a card type, a nudge type, where in the App an action started, a count, or a rough time range. They never say who a nudge was to or from.
 * **Crash logs and diagnostics.** When the App crashes: the stack trace, app version, device model, OS version and the App's state at the time. Also basic session and performance metadata.
-* **Identifiers.** A Firebase installation ID and a Google Analytics app-instance ID. These identify an installation of the App, not you. The App does **not** collect the Android Advertising ID.
+* **Identifiers.** A Firebase installation ID and a Google Analytics app-instance ID. These identify an installation of the App. With an account, the installation ID is also stored with your notification token (Section 4). The App does **not** collect the Android Advertising ID.
 * **Approximate location.** Google Analytics derives a coarse location, such as country or city, from your device's masked IP address. The App never requests location permission.
 * **Purchase events.** When you buy Friends Bell Pro, Google Analytics records the purchase event (product ID, product name and price).
 
