@@ -1,6 +1,6 @@
 # Privacy Policy for Friends Bell
 
-**Effective Date:** YYYY-MM-DD <!-- Set to the publish date. -->
+**Effective Date:** 2026-10-29
 
 ## 1. Introduction
 

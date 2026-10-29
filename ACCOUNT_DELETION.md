@@ -1,6 +1,6 @@
 # Delete Your Friends Bell Account
 
-**Last updated:** YYYY-MM-DD <!-- Set to the publish date. -->
+**Last updated:** 2026-10-29
 
 This page explains how to delete your **Friends Bell** account and the data linked to it. Friends Bell is built by **Blink22**.
 
