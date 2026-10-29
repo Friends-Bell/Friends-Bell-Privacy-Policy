@@ -17,7 +17,7 @@ By using Friends Bell, you agree to the handling of information described in thi
 | | Stays on your device | Sent to our service providers |
 |---|---|---|
 | Your contacts' names and photos | ✅ Yes, never uploaded | ❌ Never |
-| Your contacts' phone numbers | ✅ Yes, unless you have an account | Only with an account, while the App has Contacts access: sent as hashed values to find friends, and never stored (Section 4) |
+| Your contacts' phone numbers | ✅ Yes, unless you choose to find friends | Only with an account, and only if you allow finding friends: sent as hashed values, and never stored (Section 4) |
 | Your groups, reminders, notes and swipe history | ✅ Yes, never uploaded | ❌ Never |
 | Your phone number, display name and avatar color | | Only with an account: Google Firebase (Section 4) |
 | Nudges you send and receive | | Only with an account: Google Firebase, deleted automatically after 30 days (Section 4) |
@@ -38,7 +38,7 @@ Our service providers are **Google Firebase** and, for WhatsApp sign-in only, **
 
 With your permission (**READ_CONTACTS**), the App reads the names, phone numbers and photos saved in your device's contacts. It uses them to build your daily contact cards, your groups and your reminders, and to start a call or message when you tap one. Before Android asks for this permission, the App explains what it reads and what leaves your device.
 
-Your contacts are processed **on your device**. Friends Bell never uploads, sells or shares their names or photos. Their phone numbers leave your device only if you have an account, as described in Section 4. When you tap Call or Message, the App hands the number to your phone's dialer or messaging app, and only because you asked.
+Your contacts are processed **on your device**. Friends Bell never uploads, sells or shares their names or photos. Their phone numbers leave your device only if you have an account and allow finding friends, as described in Section 4. When you tap Call or Message, the App hands the number to your phone's dialer or messaging app, and only because you asked.
 
 ### Your Friends Bell data
 
@@ -78,7 +78,7 @@ Nudges contain no text that you write, and they don't carry your phone number. O
 
 ### Finding friends
 
-With an account, while the App has Contacts access (for example after you tap **Find my friends**), the App finds which of your contacts already use Friends Bell. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. The App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts. To stop this, turn off Contacts access for Friends Bell in your device settings, or log out.
+If you have an account and allow it (by tapping **Find my friends**), the App finds which of your contacts already use Friends Bell. Before you allow it, the App explains what is sent. It turns each contact's phone number into a SHA-256 hash on your device and sends the hashes to our server, which compares them with the protected copies of our users' numbers and returns the matches. The hashes are used only for that check and are **never stored**. They are still your contacts' phone numbers in another form, so we treat them with the same care and send them only over an encrypted connection. Names and photos are never sent. Once you've allowed it, the App checks again from time to time, so friends who join later appear too, and when someone nudges you, it checks whether they are one of your contacts so it can show their name from your contacts. To stop this, turn off Contacts access for Friends Bell in your device settings, or log out.
 
 ### WhatsApp sign-in records
 
@@ -121,7 +121,7 @@ Payments are handled entirely by **Google Play**. We never see or store your pay
 
 | Permission | Why |
 |---|---|
-| Contacts | Show your contacts as cards, groups and reminders (on your device, see Section 3). With an account, find friends who use Friends Bell (Section 4). |
+| Contacts | Show your contacts as cards, groups and reminders (on your device, see Section 3). With an account, and only if you allow it, find friends who use Friends Bell (Section 4). |
 | Notifications | Deliver your reminders and, with an account, your nudges. |
 | Alarms & reminders (exact alarms) | Make quick reminders ring at the exact time you set. |
 | Full-screen notifications (optional) | Show a ringing quick reminder over the lock screen. Without it, the reminder appears as a normal notification. |
